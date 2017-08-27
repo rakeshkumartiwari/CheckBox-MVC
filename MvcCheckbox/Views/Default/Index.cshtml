@@ -37,6 +37,8 @@
 
     <div class="container" style="margin-top:50px">
         <div class="form-group form-horizontal col-lg-12">
+            @Html.HiddenFor(c => c.Id)
+            @Html.HiddenFor(c => c.Name)
             @Html.CheckBoxFor(c => c.IsMonday)
             @Html.LabelFor(c => c.IsMonday, "Monday")
             @Html.CheckBoxFor(c => c.IsTuesday)
