@@ -5,21 +5,28 @@
 
 <script>
     $(document).ready(function () {
+        $("#btnSubmit").hide();
+        $("#btnUpdate").hide();
+        var n = $("input:checked").length;
+        if (n == 0) {
+            $("#btnSubmit").show();
+        }
+        else {
+            $("#btnUpdate").show();
+        }
+        //$("#btnSubmit").click(function () {
+        //    if (n == 0) {
+        //        $("#msgDiv").show();
+        //        $("#errorMsg").text("Please Select any day.");
+        //        return;
+        //    }
 
-        $("#btnSubmit").click(function () {
-            var n = $("input:checked").length;
-            if (n == 0) {
-                $("#msgDiv").show();
-                $("#errorMsg").text("Please Select any day.");
-                return;
-            }
-
-        });
+        //});
     });
-   
+
 </script>
 
-<hr/>
+<hr />
 <div class="alert alert-danger alert-dismissable" style="display:none" id="msgDiv">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <span id="errorMsg"></span>
@@ -51,6 +58,7 @@
 
 
     <input type="submit" value="Save" class="btn btn-primary" id="btnSubmit" />
+    <input type="submit" value="Update" class="btn btn-primary" id="btnUpdate" />
 
 }
 
